@@ -32,7 +32,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("LalisaMusic").error(
+        LOGGER("YukkiMusic").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
         return
@@ -40,7 +40,7 @@ async def init():
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET
     ):
-        LOGGER("LalisaMusic").warning(
+        LOGGER("YukkiMusic").warning(
             "No Spotify Vars defined. Your bot won't be able to play spotify queries."
         )
     try:
@@ -65,7 +65,7 @@ async def init():
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("LalisaMusic").error(
+        LOGGER("YukkiMusic").error(
             "[ERROR] - \n\nPlease turn on your Logger Group's Voice Call. Make sure you never close/end voice call in your log group"
         )
         sys.exit()
@@ -78,4 +78,4 @@ async def init():
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("LalisaMusic").info("Stopping Lalisa Music Bot! GoodBye")
+    LOGGER("YukkiMusic").info("Stopping Lalisa Music Bot! GoodBye")
